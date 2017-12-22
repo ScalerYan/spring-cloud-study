@@ -1,9 +1,12 @@
 server:
-  port: 8761                    # 指定该Eureka实例的端口
+  port: 8761                              # 指定该Eureka实例的端口
 
 eureka:
+  server:
+    enable-self-preservation: false       # 设为false，关闭自我保护
+    eviction-interval-timer-in-ms: 30000  # 清理间隔（单位毫秒，默认是60*1000）
   instance:
-    hostname: localhost         # 指定该Eureka实例的主机名
+    hostname: localhost                   # 指定该Eureka实例的主机名
   client:
     registerWithEureka: false
     fetchRegistry: false
