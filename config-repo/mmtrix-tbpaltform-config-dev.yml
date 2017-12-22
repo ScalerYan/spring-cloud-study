@@ -53,13 +53,6 @@ admin:
   nickname: yan
   password: 123456
 
-eureka:
-  client:
-    healthcheck:
-      enabled: true
-  instance:
-    lease-expiration-duration-in-seconds: 30
-    lease-renewal-interval-in-seconds: 10
 
 logging:
  # config: /app/log4j2.xml
