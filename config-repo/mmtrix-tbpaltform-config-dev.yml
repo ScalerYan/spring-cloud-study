@@ -1,0 +1,61 @@
+server:
+  port: 10010
+  context-path: /api
+  tomcat:
+    max-threads: 200
+    min-spare-thread: 25
+    uri-encoding: UTF-8
+    basedir:  /Users/Jason/Download/data/service/mmtrix-optplatform
+    accesslog:
+      directory: logs
+      enabled: true
+      pattern: common
+
+url:
+  backendEndpoint: http://192.168.131.106:15000/v1/optimize
+  apiEndpoint: http://192.168.131.102:10010/api
+  connTimeout: 2000
+  readTimeout: 2000
+  backendActive: true
+
+db:
+  jdbcUrl:  jdbc:mysql://localhost:3306/optplatform?useUnicode=true&characterEncoding=utf-8
+  username: root
+  password: 123456
+  initialSize: 5
+  maxActive: 50
+  maxWait: 5000
+  maxIdle: 10
+  minIdle: 5
+  removeAbandoned: true
+  removeAbandonedTimeout: 180
+  timeBetweenEvictionRunsMillis: 30000
+  minEvictableIdleTimeMillis: 1800000
+  testWhileIdle: true
+  testOnBorrow: false
+  numTestsPerEvictionRun: 5
+
+args:
+  fileDir: /Users/Jason/Desktop/upload
+  archiveAdapter: mongodb
+  archiveUrl: mongodb://opt-mongo/optplatform
+  basicSiteName: 静态优化平台
+#  basicLogoUrl: /Users/Jason/Desktop/upload/v1
+  basicLogoUrl: /Users/Jason/Desktop/upload
+
+ciArgs:
+  ak: BOQECFWSBHECBHPNMIQI
+  sk: xeKkNXklQzJO6wY71N8wKzziL6aDKVz2nnNKipxR
+  crossDomain: all
+
+admin:
+  username: jason
+  nickname: yan
+  password: 123456
+
+logging:
+ # config: /app/log4j2.xml
+  config: /Users/Jason/Desktop/config/log4j2.xml
+
+
+
