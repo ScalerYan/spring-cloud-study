@@ -19,7 +19,7 @@ url:
   backendActive: true
 
 db:
-  jdbcUrl:  jdbc:mysql://localhost:3306/optplatform?useUnicode=true&characterEncoding=utf-8
+  jdbcUrl: jdbc:mysql://localhost:3306/optplatform?useUnicode=true&characterEncoding=utf-8
   username: root
   password: 123456
   initialSize: 5
