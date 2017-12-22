@@ -16,10 +16,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://mmtrix:mmtrix2017@localhost:8761/eureka/
-
-security:
-  basic:
-    enabled: true
-  user:
-    name: mmtrix
-    password: mmtrix2017
